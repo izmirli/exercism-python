@@ -134,7 +134,11 @@ class MechaMunchManagementTest(unittest.TestCase):
 
                          {'Apple': ['Isle 1', False], 'Raspberry': ['Isle 6', False],
                           'Blueberries': ['Isle 6', False], 'Broccoli': ['Isle 3', False],
-                          'Kiwi': ['Isle 6', False], 'Melon': ['Isle 6', False]})
+                          'Kiwi': ['Isle 6', False], 'Melon': ['Isle 6', False]}),
+
+                        ({'Banana': 3, 'Apple': 2, 'Orange': 1},
+                         {'Banana': ['Isle 5', False], 'Apple': ['Isle 4', False],
+                          'Orange': ['Isle 4', False], 'Milk': ['Isle 2', True]}),
                       ]
 
         output_data = [
@@ -146,7 +150,10 @@ class MechaMunchManagementTest(unittest.TestCase):
 
                         {'Raspberry': [2, 'Isle 6', False], 'Melon': [4, 'Isle 6', False],
                          'Kiwi': [1, 'Isle 6', False], 'Broccoli': [2, 'Isle 3', False],
-                         'Blueberries': [5, 'Isle 6', False], 'Apple': [2, 'Isle 1', False]}
+                         'Blueberries': [5, 'Isle 6', False], 'Apple': [2, 'Isle 1', False]},
+
+                        {'Orange': [1, 'Isle 4', False], 'Banana': [3, 'Isle 5', False],
+                         'Apple': [2, 'Isle 4', False]},
                       ]
 
         for variant, (input_data, expected) in enumerate(zip(input_data, output_data), start=1):
